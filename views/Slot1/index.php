@@ -27,7 +27,8 @@
     <title>Document</title>
     
 </head>
-<body>
+<body id="body">
+    <input type="number" id="ganho_input" value="<?php echo $_SESSION['ganho']; ?>">
     <article class="article-horizontal">
         <div class="div-central">
             
@@ -105,48 +106,24 @@
     <div id="win" style="display:none;">
         <h1>WIN: <span id="contador">R$ 0,00</span></h1>
     </div>
-    
+    <script src="script.js"></script>
 </body>
-<script>
-    
-            
-            let maxValor = <?php echo $_SESSION['ganho']; ?>;
-            let contador = 0.00;
-    
-            // Função para formatar como moeda brasileira
-            function formatarMoeda(valor) {
-                return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-            }
-    
-            // Função para atualizar o contador
-            function atualizarContador() {
-                document.getElementById('win').style.display = "flex";
-                if (contador <= maxValor) {
-                    document.getElementById('contador').innerText = formatarMoeda(contador);
-                    contador += 0.20;
-                    setTimeout(atualizarContador, 01); // Atualiza a cada 10 milissegundos
-                } 
-            }
-            function remover(){
-                document.getElementById("win").style.display = "none";
-            }
-      
-    </script>
-    <?php
-      if ($_SESSION['executar'] === true) {
-        echo "
-        <script type='text/javascript'>
-            atualizarContador();
-        </script>
-        ";
-    }else if($_SESSION['executar'] === true){
-        echo "
-        <script type='text/javascript'>
-            remover();
-        </script>
-        ";
-    }
 
-    ?>
+<?php
+    if ($_SESSION['executar'] === true) {
+    echo "
+    <script type='text/javascript'>
+        atualizarContador();
+    </script>
+    ";
+}else if($_SESSION['executar'] === true){
+    echo "
+    <script type='text/javascript'>
+        remover();
+    </script>
+    ";
+}
+
+?>
 </html>
 

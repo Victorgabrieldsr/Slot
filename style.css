@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #0f1923;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#up-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0 0.5rem 0;
+}
+#up-nav img{
+    width: 10%;
+}
+#nav-bar{
+    width: 60%;
+}
+
+#nav-bar ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+}
+
+#nav-bar ul a {
+    padding: 0.8rem;
+    border-radius: 16px;
+    margin-right: 0.5rem;
+    transition: ease 0.4s;
+    color: white;
+    text-decoration: none;
+}
+
+#nav-bar ul a:hover {
+    background-color: #152d44;
+}
+
+#nav-bar ~ hr{
+    opacity: 0.4;
+}
+
+#jogos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#jogos-div{
+    width: 60%;
+    color: white;
+}
+
+.jogos-div-square{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+.card{
+    width: 200px;
+    border-radius: 16px;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 210px;
+}
+
+.card img{ 
+    transition: ease 0.3s;
+    width: 95%;
+    border-radius: 16px;
+}
+.card img:hover{
+    opacity: 0.5;
+    width: 105%; 
+}
+    
+.card button{
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 16px;
+    background-color: #152d44;
+}
+    
+.card:hover button{
+    display: flex;
+}

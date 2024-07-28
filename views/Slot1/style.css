@@ -69,9 +69,13 @@ body{
     font-size: 2rem;
     justify-content: center;
     align-items: center;
-    background-color: rgb(196, 184, 79);
+    background-color: rgb(83, 196, 79);
     color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 16px;
     transition: width 0.5s ease;
+}
+
+#ganho_input{
+    display: none;
 }
